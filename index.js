@@ -6,7 +6,7 @@ const textRoutes = require("./routes/api/text.js");
 const imageRoutes = require("./routes/api/image");
 
 const app = express();
-const PORT = process.env.PORT || 3000 || 5000 || 8080;
+const PORT =  3000 || 5000 || 8080;
 
 /**============================================
  *               SETUP MIDDLEWARE
@@ -21,9 +21,10 @@ app.get("/", (req, res) => {
   res.status(200).json({
     api_name: "Candaan API",
     author: "ardhptr21",
+    naintainer: "idlanyor",
     description:
       "Candaan API merupakan Rest API yang dibuat untuk mendapatkan beberapa jokes jokes receh dari Indonesia, semua data data yang ada di Candaan API diambil dari internet yang kemudian dikumpulkan menjadi satu, untuk dibuat Rest API",
-    version: "v1.0.0",
+    version: "v1.2.0",
     end_points: {
       "/api/text": "Mendapatkan semua data candaan berupa teks",
       "/api/text/random": "Mendapatkan satu data candaan berupa teks secara random",
